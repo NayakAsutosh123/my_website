@@ -1,97 +1,182 @@
-/* General reset */
+
+    /* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Main Container */
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+  }
+
+
+/* Header Section Styling */
+.header-section {
+  background-color: #4CAF50; /* Change this color as needed */
+  color: white;
+  text-align: center;
+  padding: 40px;
 }
 
-/* Body styling */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    padding: 20px;
+.header-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-/* Navigation bar styling */
-header {
+.header-section p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.company-logo {
+  border-radius: 50%;
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+}
+  
+  /* Navigation Bar Styling */
+  .navbar {
     background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
+    padding: 20px;
     text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+  }
+  
+  .navbar nav {
+    display: inline-block;
+  }
+  
+  .navbar a {
     color: white;
     text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Section styling */
-section {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-/* Button styling */
-button {
-    display: block;
-    margin: 10px auto;
     padding: 10px 20px;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+  }
+  
+  .navbar a:hover {
+    border: 2px solid white;
+    transition: 0.3s ease;
+  }
+  
+  /* Grid Section */
+  .main-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .grid-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Contact Us Section */
+  .contact-section {
+    flex: 0.4;
+    background-color: #f1f1f1;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .contact-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-section button {
+    padding: 10px;
     background-color: #333;
     color: white;
     border: none;
     border-radius: 5px;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-/* Contact form styling */
-form {
-    width: 300px;
-    margin: 0 auto;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    width: 100%;
-    padding: 10px;
-}
-
-/* Contact form response styling */
-#formResponse {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .contact-section button:hover {
+    background-color: #6a11cb;
+    transition: 0.3s ease;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: black;
+    color: white;
     text-align: center;
-    color: green;
-}
+    padding: 20px 0;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-section {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .grid-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .contact-section {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .navbar a {
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  }

@@ -1,51 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Website Design</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <!-- Navigation bar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Home section -->
-    <section id="home">
-        <h1>Welcome to My Website</h1>
-        <p>This is a  website built with HTML, CSS, and JavaScript.</p>
-        <button onclick="showMessage()">Click Me!</button>
-    </section>
+  <div class="container">
 
-    <!-- About section -->
-    <section id="about">
-        <h2>About This Website</h2>
-        <p>This website demonstrates a basic layout with navigation, content sections, and a form.</p>
-    </section>
+        <!-- Header Section -->
+        <header class="header-section">
+            <img src="https://via.placeholder.com/150" alt="Company Logo" class="company-logo">
+            <h1>Your Company Name</h1>
+            <p>Your company is a leading provider of exceptional services, committed to delivering the highest quality and innovation in everything we do. We aim to exceed our clients' expectations with every project.</p>
+          </header>
 
-    <!-- Contact section -->
-    <section id="contact">
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <nav>
+        <a href="#" onclick="showHome()">Home</a>
+        <a href="about.html" target="_blank">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Grid Section with Images and Contact Form -->
+    <div class="main-section">
+      <div class="grid-section">
+        <div class="grid-item"><img src="D:/Website_Demo/image1.jpg" alt="Image 1" height="300px" width="200px"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 2"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 3"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 4"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 5"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 6"></div>
+      </div>
+
+      <!-- Contact Us Form -->
+      <div class="contact-section">
         <h2>Contact Us</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <button type="submit">Submit</button>
+        <form action="">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
         </form>
-        <p id="formResponse"></p>
-    </section>
+      </div>
+    </div>
+    <div id="about-content" class="content" style="display: none;">
+        <h2>About Us</h2>
+        <p>Welcome to Your Company Name! We are dedicated to providing top-notch services and solutions that meet our clients' needs. Our team of professionals is passionate about what we do and strives to exceed expectations.</p>
+        
+        <h3>Achievements</h3>
+        <ul>
+          <li>Over 10 years of industry experience.</li>
+          <li>Awarded "Best Service Provider" in 2022.</li>
+          <li>Successfully completed 500+ projects.</li>
+        </ul>
+        
+        <h3>Our Vision</h3>
+        <p>To be a leader in our industry, recognized for our commitment to quality and customer satisfaction.</p>
+        
+        <img src="https://via.placeholder.com/300" alt="Achievement Image">
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Professional Website Design. All Rights Reserved.</p>
+    </footer>
+
+  </div>
+
 </body>
+<script>
+  function showHome() {
+    document.getElementById('home-content').style.display = 'block';
+    document.getElementById('about-content').style.display = 'none';
+  }
+  
+  function showAbout() {
+    document.getElementById('home-content').style.display = 'none';
+    document.getElementById('about-content').style.display = 'block';
+  }
+  </script>
 </html>
