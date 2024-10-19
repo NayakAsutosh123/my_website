@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home section -->
+    <section id="home">
+        <h1>Welcome to My Website</h1>
+        <p>This is a  website built with HTML, CSS, and JavaScript.</p>
+        <button onclick="showMessage()">Click Me!</button>
+    </section>
+
+    <!-- About section -->
+    <section id="about">
+        <h2>About This Website</h2>
+        <p>This website demonstrates a basic layout with navigation, content sections, and a form.</p>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="formResponse"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
